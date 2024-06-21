@@ -1,0 +1,8 @@
+services:
+  connexion-hello-world:
+    build:
+      context: .
+      target: vanilla
+    volumes:
+      - .:/hello-world:cached
+    command: sleep infinity

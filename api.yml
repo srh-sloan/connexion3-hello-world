@@ -1,0 +1,30 @@
+openapi: "3.0.0"
+
+info:
+  title: "Hello World"
+  description: "Hello world connexion 3"
+  version: "0.0.1"
+
+paths:
+  /greeting/{name}:
+    get:
+      operationId: "run.post_greeting"
+      responses:
+        '200':
+          description: "Greeting response"
+          content:
+            text/plain:
+              schema:                
+                type: "string"
+      parameters:
+        - name: "name"
+          in: "path"
+          required: true
+          schema:
+            type: "string"
+        - name: "greeting"
+          in: "query"
+          required: true
+          schema:
+            type: "string"
+
